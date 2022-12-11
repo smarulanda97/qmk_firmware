@@ -35,11 +35,11 @@ LCTL_T(KC_ESC),   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     
 
   [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,   KC_UP, KC_PSCR, XXXXXXX, KC_BSPC,
+       KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_S, XXXXXXX,   KC_UP, KC_PSCR, XXXXXXX, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_ESC, XXXXXXX, KC_LCTL, KC_LSFT, KC_LALT, XXXXXXX,                      XXXXXXX, KC_LEFT, KC_DOWN,KC_RIGHT, XXXXXXX,  KC_DEL,
+       KC_ESC, XXXXXXX, KC_LCTL, KC_LSFT, KC_LALT, XXXXXXX,                         KC_Y, KC_LEFT, KC_DOWN,KC_RIGHT, XXXXXXX,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDO,  KC_CUT, KC_COPY,KC_PASTE, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_Z,  KC_CUT, KC_COPY,KC_PASTE, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LALT, _______,  KC_SPC,     KC_ENT,   MO(5), KC_RGUI
                                       //`--------------------------'  `--------------------------'
@@ -109,7 +109,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 #define L_ADJUST 16
 
 void oled_render_layer_state(void) {
-    oled_write_P(PSTR("@smarulanda97 "), false);
+    oled_write_P(PSTR("@smarulanda97 - "), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (layer_state) {
         case L_QWERTY:
