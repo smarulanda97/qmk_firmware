@@ -29,19 +29,19 @@ LCTL_T(KC_ESC),   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,RSFT_T(KC_SLSH),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            MO(4),   MO(1),  KC_SPC,     KC_ENT,   MO(2),   MO(5)
+                                            MO(5),   MO(1),  KC_SPC,     KC_ENT,   MO(2),   MO(4)
                                       //`--------------------------'  `--------------------------'
   ),
 
   [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,   KC_UP, KC_PSCR, XXXXXXX, KC_BSPC,
+       KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,   KC_UP, KC_PSCR,     XXXXXXX, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TAB, XXXXXXX, KC_LCTL, KC_LSFT, KC_LALT, XXXXXXX,                      XXXXXXX, KC_LEFT, KC_DOWN,KC_RIGHT, XXXXXXX,  KC_DEL,
+       KC_TAB, XXXXXXX, KC_LCTL, KC_LSFT, KC_LALT, XXXXXXX,                 RALT(KC_TAB), KC_LEFT, KC_DOWN,KC_RIGHT,RALT(KC_TAB),  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT, _______,  KC_SPC,     KC_ENT,   MO(6), KC_RGUI
+                                          _______, _______,  KC_SPC,     KC_ENT,   MO(6), KC_RGUI
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -83,13 +83,13 @@ LCTL_T(KC_ESC),   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     
 
   [5] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC,   XXXXXXX,LCTL(KC_W),   XXXXXXX,LCTL(KC_R),LCTL(KC_T),         RCTL(KC_Y), XXXXXXX, XXXXXXX, XXXXXXX,RCTL(KC_P),KC_BSPC,
+       KC_ESC,   XXXXXXX,LCTL(KC_W),   XXXXXXX,LCTL(KC_R),LCTL(KC_T),         RCTL(KC_Y), XXXXXXX, XXXXXXX,RCTL(KC_O),RCTL(KC_P),KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TAB,LCTL(KC_A),LCTL(KC_S),LCTL(KC_D),LCTL(KC_F),LCTL(KC_G),            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX,  KC_DEL,
+       KC_TAB,LCTL(KC_A),LCTL(KC_S),LCTL(KC_D),LCTL(KC_F),LCTL(KC_G),            XXXXXXX, XXXXXXX, XXXXXXX,RCTL(KC_L),   XXXXXXX,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),LCTL(KC_V), XXXXXXX,           RCTL(KC_N), XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX,
+      XXXXXXX,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),LCTL(KC_V), XXXXXXX,           RCTL(KC_N), XXXXXXX, XXXXXXX,   XXXXXXX,   XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT, _______,  KC_SPC,     KC_ENT,   MO(5), KC_RGUI
+                                          _______, KC_LALT,  KC_SPC,     KC_ENT, KC_RSFT, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
