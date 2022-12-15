@@ -47,11 +47,11 @@ LCTL_T(KC_ESC),   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     
 
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, XXXXXXX, XXXXXXX, KC_LPRN, KC_RPRN, XXXXXXX,                      KC_HASH, KC_EXLM, KC_AMPR, KC_PIPE, KC_PSLS, KC_BSPC,
+      XXXXXXX, XXXXXXX, XXXXXXX, KC_LPRN, KC_RPRN, KC_HASH,                      KC_EXLM, KC_AMPR, KC_PIPE, KC_PSLS, KC_NUBS, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, XXXXXXX,                       KC_DLR,  KC_EQL, KC_PMNS, KC_UNDS,  KC_GRV,  KC_DEL,
+      XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR,   KC_AT,                       KC_DLR,  KC_EQL, KC_PMNS, KC_UNDS,  KC_GRV,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, XXXXXXX,                        KC_AT, KC_LABK, KC_RABK, KC_QUES, KC_TILD, KC_QUES,
+      XXXXXXX, XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, XXXXXXX,                      KC_PLUS, XXXXXXX, KC_LABK, KC_RABK, KC_TILD, KC_QUES,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LALT, _______,  KC_SPC,     KC_ENT, _______, KC_RGUI
                                       //`--------------------------'  `--------------------------'
@@ -83,11 +83,11 @@ LCTL_T(KC_ESC),   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     
 
   [5] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC,   XXXXXXX,LCTL(KC_W),   XXXXXXX,LCTL(KC_R),LCTL(KC_T),         RCTL(KC_Y), XXXXXXX, XXXXXXX,RCTL(KC_O),RCTL(KC_P),KC_BSPC,
+       KC_ESC, XXXXXXX, C(KC_W), XXXXXXX, C(KC_R), C(KC_T),                   RCTL(KC_Y), XXXXXXX, XXXXXXX,RCTL(KC_O),RCTL(KC_P), KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TAB,LCTL(KC_A),LCTL(KC_S),LCTL(KC_D),LCTL(KC_F),LCTL(KC_G),            XXXXXXX, XXXXXXX, XXXXXXX,RCTL(KC_L),   XXXXXXX,  KC_DEL,
+       KC_TAB, C(KC_A), C(KC_S), C(KC_D), C(KC_F), C(KC_G),                      XXXXXXX, XXXXXXX, XXXXXXX,RCTL(KC_L),   XXXXXXX,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),LCTL(KC_V), XXXXXXX,           RCTL(KC_N), XXXXXXX, XXXXXXX,   XXXXXXX,   XXXXXXX, XXXXXXX,
+      XXXXXXX, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), XXXXXXX,                   RCTL(KC_N), XXXXXXX, XXXXXXX,   XXXXXXX,   XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, KC_LALT,  KC_SPC,     KC_ENT, KC_RSFT, _______
                                       //`--------------------------'  `--------------------------'
