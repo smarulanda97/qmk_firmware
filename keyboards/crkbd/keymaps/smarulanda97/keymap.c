@@ -22,15 +22,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-LCTL_T(KC_ESC),   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
- LT(3,KC_TAB),    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,RSFT_T(KC_SLSH),
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            MO(5),   MO(1),  KC_SPC,     KC_ENT,   MO(2),   MO(4)
-                                      //`--------------------------'  `--------------------------'
+  //,-----------------------------------------------------------------------------.                            ,-----------------------------------------------------------------------------.
+    CTL_T(KC_ESC),        KC_Q,  LT(0,KC_W),        KC_E,        KC_R,        KC_T,                                     KC_Y,        KC_U,        KC_I,  LT(0,KC_O),        KC_P,     KC_BSPC,
+  //|------------+------------+------------+------------+------------+------------|                            |------------+------------+------------+------------+------------+------------|
+     LT(3,KC_TAB),  LT(0,KC_A),  LT(0,KC_S),        KC_D,  LT(0,KC_F),  LT(0,KC_G),                                     KC_H,        KC_J,        KC_K,  LT(0,KC_L),     KC_SCLN,     KC_QUOT,
+  //|------------+------------+------------+------------+------------+------------|                            |------------+------------+------------+------------+------------+------------|
+          KC_LSFT,  LT(0,KC_Z),  LT(0,KC_X),  LT(0,KC_C),  LT(0,KC_V),        KC_B,                               LT(0,KC_N),        KC_M,     KC_COMM,      KC_DOT,     KC_SLSH, RSFT_T(KC_SLSH),
+  //|------------+------------+------------+------------+------------+------------+------------|  |------------+------------+------------+------------+------------+------------+------------|
+                                                                MO(5),       MO(1),      KC_SPC,         KC_ENT,       MO(2),       MO(4)
+                                                      //`---------------------------------------'  `-------------------------------------'
   ),
 
   [1] = LAYOUT_split_3x6_3(
@@ -83,18 +83,6 @@ LCTL_T(KC_ESC),   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     
 
   [5] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC, XXXXXXX, C(KC_W), XXXXXXX, C(KC_R), C(KC_T),                   RCTL(KC_Y), XXXXXXX, XXXXXXX,RCTL(KC_O),RCTL(KC_P), KC_BSPC,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TAB, C(KC_A), C(KC_S), C(KC_D), C(KC_F), C(KC_G),                      XXXXXXX, XXXXXXX, XXXXXXX,RCTL(KC_L),   XXXXXXX,  KC_DEL,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), XXXXXXX,                   RCTL(KC_N), XXXXXXX, XXXXXXX,   XXXXXXX,   XXXXXXX, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, KC_LALT,  KC_SPC,     KC_ENT, KC_RSFT, _______
-                                      //`--------------------------'  `--------------------------'
-  ),
-
-  [6] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -119,41 +107,35 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 #define L_SYMBOLS 4
 #define L_NUMPAD 8
 #define L_FUNCS 16
-#define L_SHORTCUTS 32
-#define L_ADJUST 64
+#define L_ADJUST 32
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("@smarulanda97 - "), false);
     oled_write_P(PSTR("Layer: "), false);
     switch (layer_state) {
         case L_QWERTY:
-            oled_write_ln_P(PSTR("Qwerty"), false);
+            oled_write_ln_P(PSTR("Qwerty\n"), false);
             break;
         case L_NAVIGATE:
-            oled_write_ln_P(PSTR("Navigate"), false);
+            oled_write_ln_P(PSTR("Navigate\n"), false);
             break;
         case L_SYMBOLS:
-            oled_write_ln_P(PSTR("Symbols"), false);
+            oled_write_ln_P(PSTR("Symbols\n"), false);
             break;
         case L_NUMPAD:
-            oled_write_ln_P(PSTR("Numpad"), false);
-            break;
-        case L_SHORTCUTS:
-            oled_write_ln_P(PSTR("Shortcuts"), false);
+            oled_write_ln_P(PSTR("Numpad\n"), false);
             break;
         case L_FUNCS:
-            oled_write_ln_P(PSTR("Functions"), false);
+            oled_write_ln_P(PSTR("Functions\n"), false);
             break;
         case L_ADJUST:
         case L_ADJUST|L_NAVIGATE:
         case L_ADJUST|L_SYMBOLS:
         case L_ADJUST|L_NUMPAD:
-        case L_ADJUST|L_SHORTCUTS:
         case L_ADJUST|L_FUNCS:
         case L_ADJUST|L_NAVIGATE|L_SYMBOLS:
         case L_ADJUST|L_NAVIGATE|L_SYMBOLS|L_NUMPAD:
-        case L_ADJUST|L_NAVIGATE|L_SYMBOLS|L_NUMPAD|L_SHORTCUTS:
-        case L_ADJUST|L_NAVIGATE|L_SYMBOLS|L_NUMPAD|L_SHORTCUTS|L_FUNCS:
+        case L_ADJUST|L_NAVIGATE|L_SYMBOLS|L_NUMPAD|L_FUNCS:
             oled_write_ln_P(PSTR("Adjust"), false);
             break;
     }
@@ -223,9 +205,85 @@ bool oled_task_user(void) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (record->event.pressed) {
-    set_keylog(keycode, record);
-  }
+    if (record->event.pressed) {
+        set_keylog(keycode, record);
+    }
+
+    switch (keycode) {
+        case LT(0,KC_Z):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_Z)); // Ctrl-Z
+                return false;
+            }
+            return true;
+        case LT(0,KC_X):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_X)); // Ctrl-X
+                return false;
+            }
+            return true;
+        case LT(0,KC_C):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_C)); // Ctrl-C
+                return false;
+            }
+            return true;
+        case LT(0,KC_V):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_V)); // Ctrl-V
+                return false;
+            }
+            return true;
+        case LT(0,KC_A):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_A)); // Ctrl-A
+                return false;
+            }
+            return true;
+        case LT(0,KC_S):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_S)); // Ctrl-S
+                return false;
+            }
+            return true;
+        case LT(0,KC_F):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_F)); // Ctrl-F
+                return false;
+            }
+            return true;
+        case LT(0,KC_G):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_G)); // Ctrl-G
+                return false;
+            }
+            return true;
+        case LT(0,KC_W):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_W)); // Ctrl-W
+                return false;
+            }
+            return true;
+        case LT(0,KC_L):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_L)); // Ctrl-L
+                return false;
+            }
+            return true;
+        case LT(0,KC_O):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_O)); // Ctrl-W
+                return false;
+            }
+            return true;
+        case LT(0,KC_N):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(C(KC_N)); // Ctrl-N
+                return false;
+            }
+            return true;
+    }
+
   return true;
 }
 #endif // OLED_ENABLE
