@@ -19,30 +19,31 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [0] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------------------------------.                            ,-----------------------------------------------------------------------------.
-    CTL_T(KC_ESC),        KC_Q,  LT(0,KC_W),        KC_E,        KC_R,        KC_T,                                     KC_Y,        KC_U,        KC_I,  LT(0,KC_O),        KC_P,     KC_BSPC,
-  //|------------+------------+------------+------------+------------+------------|                            |------------+------------+------------+------------+------------+------------|
-     LT(3,KC_TAB),  LT(0,KC_A),  LT(0,KC_S),        KC_D,  LT(0,KC_F),  LT(0,KC_G),                                     KC_H,        KC_J,        KC_K,  LT(0,KC_L),     KC_SCLN,     KC_QUOT,
-  //|------------+------------+------------+------------+------------+------------|                            |------------+------------+------------+------------+------------+------------|
-          KC_LSFT,  LT(0,KC_Z),  LT(0,KC_X),  LT(0,KC_C),  LT(0,KC_V),        KC_B,                               LT(0,KC_N),        KC_M,     KC_COMM,      KC_DOT,     KC_SLSH, RSFT_T(KC_SLSH),
-  //|------------+------------+------------+------------+------------+------------+------------|  |------------+------------+------------+------------+------------+------------+------------|
-                                                                MO(3),       MO(1),      KC_SPC,         KC_ENT,       MO(2),        MO(4)
-                                                      //`---------------------------------------'  `-------------------------------------'
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+       KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSPC,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+ LT(3,KC_TAB),    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          KC_LCTL,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_RALT
+                                      //`--------------------------'  `--------------------------'
   ),
 
   [1] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------------------------------.                            ,-----------------------------------------------------------------------------.
-    CTL_T(KC_ESC),     XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,                                  XXXXXXX,  RCS(KC_UP),       KC_UP,     KC_PSCR,     XXXXXXX,     KC_BSPC,
-  //|------------+------------+------------+------------+------------+------------|                            |------------+------------+------------+------------+------------+------------|
-     LT(3,KC_TAB),     XXXXXXX,     KC_LCTL,     KC_LALT,     KC_LALT,      KC_DEL,                             RCS(KC_LEFT),     KC_LEFT,     KC_DOWN,    KC_RIGHT,RCS(KC_RGHT),      KC_DEL,
-  //|------------+------------+------------+------------+------------+------------|                            |------------+------------+------------+------------+------------+------------|
-          XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,     XXXXXXX,                                  XXXXXXX,     XXXXXXX,RCS(KC_DOWN),     XXXXXXX,     XXXXXXX,     XXXXXXX,
-  //|------------+------------+------------+------------+------------+------------+------------|  |------------+------------+------------+------------+------------+------------+------------|
-                                                              _______,     _______,      KC_SPC,         KC_ENT,       MO(5),      KC_RGUI
-                                                      //`---------------------------------------'  `-------------------------------------'
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+CTL_T(KC_ESC), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,   KC_UP, KC_PSCR, XXXXXXX, KC_BSPC,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+ LT(3,KC_TAB), XXXXXXX, KC_LCTL, KC_LALT, KC_LSFT,LWIN(KC_L),                    XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,  KC_DEL,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          _______, _______,  KC_SPC,     KC_ENT,   MO(5), KC_RWIN
+                                      //`--------------------------'  `--------------------------'
   ),
 
   [2] = LAYOUT_split_3x6_3(
@@ -58,24 +59,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [3] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------------------------------.                            ,-----------------------------------------------------------------------------.
-    CTL_T(KC_ESC),     XXXXXXX,     XXXXXXX,     KC_MINS,     KC_PLUS,      KC_EQL,                                  XXXXXXX,        KC_7,        KC_8,        KC_9,     XXXXXXX,     KC_BSPC,
-  //|------------+------------+------------+------------+------------+------------|                            |------------+------------+------------+------------+------------+------------|
-     LT(3,KC_TAB),     XXXXXXX,     XXXXXXX,     KC_ASTR,     KC_PSLS,     KC_PERC,                                  XXXXXXX,        KC_4,        KC_5,        KC_6,     XXXXXXX,      KC_DEL,
-  //|------------+------------+------------+------------+------------+------------|                            |------------+------------+------------+------------+------------+------------|
-          XXXXXXX,     XXXXXXX,     XXXXXXX,     KC_CIRC,     KC_COMM,      KC_DOT,                                  XXXXXXX,        KC_1,        KC_2,        KC_3,     XXXXXXX,     XXXXXXX,
-  //|------------+------------+------------+------------+------------+------------+------------|  |------------+------------+------------+------------+------------+------------+------------|
-                                                              _______,     _______,      KC_SPC,         KC_ENT,        KC_0,      KC_DOT
-                                                      //`---------------------------------------'  `-------------------------------------'
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+CTL_T(KC_ESC), XXXXXXX, XXXXXXX, KC_MINS, KC_PLUS,  KC_EQL,                      XXXXXXX,    KC_7,    KC_8,    KC_9, XXXXXXX, KC_BSPC,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+ LT(3,KC_TAB), XXXXXXX, XXXXXXX, KC_ASTR, KC_PSLS, KC_PERC,                      XXXXXXX,    KC_4,    KC_5,    KC_6, XXXXXXX,  KC_DEL,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      XXXXXXX, XXXXXXX, XXXXXXX, KC_CIRC, KC_COMM,  KC_DOT,                      XXXXXXX,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          _______, _______,  KC_SPC,     KC_ENT,    KC_0,  KC_DOT
+                                      //`--------------------------'  `--------------------------'
   ),
 
   [4] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB, XXXXXXX, XXXXXXX, KC_BRIU, KC_VOLU, XXXXXXX,                      XXXXXXX,   KC_F7,   KC_F8,   KC_F9,  KC_F10, KC_BSPC,
+CTL_T(KC_ESC), XXXXXXX, XXXXXXX, KC_BRIU, KC_VOLU, XXXXXXX,                      XXXXXXX,   KC_F7,   KC_F8,   KC_F9,  KC_F10, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, XXXXXXX, XXXXXXX, KC_BRID, KC_VOLD, XXXXXXX,                      XXXXXXX,   KC_F4,   KC_F5,   KC_F6,  KC_F11,  KC_DEL,
+ LT(3,KC_TAB), XXXXXXX, XXXXXXX, KC_BRID, KC_VOLD, XXXXXXX,                      XXXXXXX,   KC_F4,   KC_F5,   KC_F6,  KC_F11,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE, XXXXXXX,                      XXXXXXX,   KC_F1,   KC_F2,   KC_F3,  KC_F12, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE, XXXXXXX,                      XXXXXXX,   KC_F1,   KC_F2,   KC_F3,  KC_F12, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,     KC_ENT, KC_RALT, KC_RCTL
                                       //`--------------------------'  `--------------------------'
@@ -209,81 +210,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         set_keylog(keycode, record);
     }
 
-    switch (keycode) {
-        case LT(0,KC_Z):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_Z)); // Ctrl-Z
-                return false;
-            }
-            return true;
-        case LT(0,KC_X):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_X)); // Ctrl-X
-                return false;
-            }
-            return true;
-        case LT(0,KC_C):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_C)); // Ctrl-C
-                return false;
-            }
-            return true;
-        case LT(0,KC_V):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_V)); // Ctrl-V
-                return false;
-            }
-            return true;
-        case LT(0,KC_A):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_A)); // Ctrl-A
-                return false;
-            }
-            return true;
-        case LT(0,KC_S):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_S)); // Ctrl-S
-                return false;
-            }
-            return true;
-        case LT(0,KC_F):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_F)); // Ctrl-F
-                return false;
-            }
-            return true;
-        case LT(0,KC_G):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_G)); // Ctrl-G
-                return false;
-            }
-            return true;
-        case LT(0,KC_W):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_W)); // Ctrl-W
-                return false;
-            }
-            return true;
-        case LT(0,KC_L):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_L)); // Ctrl-L
-                return false;
-            }
-            return true;
-        case LT(0,KC_O):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_O)); // Ctrl-W
-                return false;
-            }
-            return true;
-        case LT(0,KC_N):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_N)); // Ctrl-N
-                return false;
-            }
-            return true;
-    }
-
-  return true;
+    return true;
 }
 #endif // OLED_ENABLE
