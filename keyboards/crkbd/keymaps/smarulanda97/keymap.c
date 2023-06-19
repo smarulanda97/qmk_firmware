@@ -1,6 +1,7 @@
 /*
 Copyright 2019 @foostan
 Copyright 2020 Drashna Jaelre <@drashna>
+Copyright 2023 Santiago Marulanda <@smarulanda97>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -30,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
 SFT_T(KC_CAPS),   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,RSFT_T(KC_SLSH),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_RCTL
+                                          KC_RCTL,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_LALT
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -38,7 +39,7 @@ SFT_T(KC_CAPS),   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                     
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, KC_PSCR, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TAB, XXXXXXX, KC_LCTL, KC_LALT, KC_LSFT, XXXXXXX,                      XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX,  KC_DEL,
+       KC_TAB, XXXXXXX, KC_LCTL, KC_LALT, KC_LSFT, XXXXXXX,                      KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT,  KC_END,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX,LWIN(KC_L),XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -72,11 +73,11 @@ SFT_T(KC_CAPS),   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                     
 
   [4] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_ESC, KC_BRID, KC_BRIU, KC_VOLU, KC_MUTE, KC_VOLD,                      XXXXXXX,   KC_F7,   KC_F8,   KC_F9,  KC_F10, KC_BSPC,
+       KC_ESC, XXXXXXX, KC_BRIU, KC_BRID, KC_BRIU, XXXXXXX,                      KC_VOLD,   KC_F7,   KC_F8,   KC_F9,  KC_F10, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TAB, XXXXXXX, KC_LCTL, KC_LALT, KC_LSFT, XXXXXXX,                      XXXXXXX,   KC_F4,   KC_F5,   KC_F6,  KC_F11,  KC_DEL,
+       KC_TAB, XXXXXXX, KC_LCTL, KC_LALT, KC_LSFT, XXXXXXX,                      KC_VOLU,   KC_F4,   KC_F5,   KC_F6,  KC_F11,  KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX,   KC_F1,   KC_F2,   KC_F3,  KC_F12, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_MUTE,   KC_F1,   KC_F2,   KC_F3,  KC_F12, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______,  KC_SPC,     KC_ENT, _______, _______
                                       //`--------------------------'  `--------------------------'
