@@ -23,7 +23,7 @@ The homing thumb fingers are used to access the different layers.
 
 ### Layer 1: Lower
 
-![Layer 1](https://i.imgur.com/6t0ErtEh.png)
+![Layer 1](https://i.imgur.com/6t0ErtEh.png)  
 
 The Lower layer gives access to the F keys on the top row row, number keys on the second row, and shifted number keys on the home row. The bottom role contains the remaining symbol keys and some shifted symbol keys.
 
