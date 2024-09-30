@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
      * | ESC  |      |      |      |      |      |                    |      |   F9 |  F10 |  F11 |  F12 | Del  |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * | Tab  |      |      |      |      |      |-------.    ,-------|      |   F5 |   F6 |   F7 |   F8 |      |
+     * | Tab  |      |LCTRL | LAlt |LShift|      |-------.    ,-------|      |   F5 |   F6 |   F7 |   F8 |      |
      * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
      * |      |      |      |      |      |      |-------|    |-------|      |   F1 |   F2 |   F3 |   F4 |      |
      * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -136,9 +136,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_FUNCTIONS] = LAYOUT(
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX,   KC_F7,   KC_F8,   KC_F9,  KC_F10, _______,
-        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX,   KC_F4,   KC_F5,   KC_F6,  KC_F11, XXXXXXX,
-        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  _______, _______, XXXXXXX,   KC_F1,   KC_F2,   KC_F3,  KC_F12, XXXXXXX,
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                    XXXXXXX,   KC_F9,  KC_F10,  KC_F11,  KC_F12, _______,
+        _______, XXXXXXX, KC_LCTL, KC_LALT, KC_LSFT, XXXXXXX,                    XXXXXXX,   KC_F5,   KC_F6,   KC_F7,   KC_F8, _______,
+        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  _______, _______, XXXXXXX,   KC_F1,   KC_F2,   KC_F3,   KC_F4, _______,
                                    _______, _______, _______,  _______, _______, _______, XXXXXXX, _______
     ),
 
@@ -166,4 +166,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    _______, _______, _______,  _______, _______, _______, XXXXXXX, _______
     ),
 };
+
 
