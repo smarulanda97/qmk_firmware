@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, XXXXXXX, XXXXXXX, KC_MINS, KC_PLUS,  KC_EQL,                      XXXXXXX,    KC_7,    KC_8,    KC_9, XXXXXXX, _______,
     _______, XXXXXXX, XXXXXXX, KC_ASTR, KC_PSLS, KC_PERC,                      KC_HOME,    KC_4,    KC_5,    KC_6, XXXXXXX, _______,
     _______, XXXXXXX, XXXXXXX, KC_CIRC, KC_COMM,  KC_DOT, _______,    _______, XXXXXXX,    KC_1,    KC_2,    KC_3, XXXXXXX, _______,
-                      _______, _______, XXXXXXX, _______, _______,    _______, _______,    KC_0,  KC_DOT, _______
+                      _______, _______, XXXXXXX, _______, _______,    _______,    KC_0,  KC_DOT, _______, _______
     ),
 
     /*
@@ -121,7 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYMBOLS] = LAYOUT(
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, XXXXXXX, XXXXXXX, KC_LPRN, KC_RPRN, KC_HASH,                      KC_EXLM, KC_AMPR, KC_PIPE, KC_PSLS, KC_PSCR, _______,
-    _______, XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR,   KC_AT,                       KC_DLR,  KC_EQL, KC_PMNS, KC_UNDS,  KC_END, XXXXXXX,
+    _______, XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR,   KC_AT,                       KC_DLR,  KC_EQL, KC_PMNS, KC_UNDS,  KC_GRV, XXXXXXX,
     _______, XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, XXXXXXX, _______,    _______, KC_PLUS,KC_MINUS, KC_LABK, KC_RABK, KC_TILD, KC_QUES,
                       _______, _______, _______, _______, _______,    _______, _______, XXXXXXX, KC_BSPC, _______
     ),

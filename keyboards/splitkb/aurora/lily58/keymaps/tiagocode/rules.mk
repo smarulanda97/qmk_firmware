@@ -23,4 +23,4 @@ LTO_ENABLE = yes
 # Enables the words per minute (WPM) counter
 ENCODER_ENABLE = no
 # Enables tap dance
-TAP_DANCE_ENABLE = yes
+TAP_DANCE_ENABLE = no
